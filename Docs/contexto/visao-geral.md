@@ -2,7 +2,7 @@
 
 ## O produto
 
-**Zaleva** (aportuguesamento de *Tsaleach*, hebraico para "sucesso/prosperar") é uma plataforma integrada de gestão da jornada do paciente. Tese: **"cuidado e resultado avançam juntos"** — cada evento avança a jornada (marketing → conversa → CRM → agenda → consulta → orçamento → contrato → procedimento → pós-atendimento → recorrência), tudo conectado à gestão.
+**Zaleva** (de *Tsaleach*, hebraico associado a sucesso, prosperidade, avanço e realização) é uma plataforma integrada de gestão da jornada do paciente. Tagline oficial: **"Cuidado que gera valor"** — a prosperidade é tanto o resultado financeiro do profissional quanto o valor gerado ao paciente por uma jornada fluida e confiável; cada evento avança a jornada (marketing → conversa → CRM → agenda → consulta → orçamento → contrato → procedimento → pós-atendimento → recorrência), tudo conectado à gestão. A história completa da marca está no modal "Sobre a marca" (`components/modules/BrandStory.tsx`).
 
 Este repositório é o **protótipo demonstrativo**: frontend puro (sem backend), dados 100% mockados, IA simulada com respostas pré-escritas e delays. Objetivo: encantar médicos em demonstração. Refresh reseta os dados (estado em memória); a sessão de login persiste em `sessionStorage`.
 

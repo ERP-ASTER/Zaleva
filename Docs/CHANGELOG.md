@@ -2,6 +2,11 @@
 
 > Cada atualização implementada é registrada aqui automaticamente (mais recente no topo), com referência aos documentos de contexto afetados. Formato: data · título · o que mudou · docs atualizados.
 
+## 2026-07-25 · Modal da marca "Zaleva — Cuidado que gera valor"
+- Novo `components/modules/BrandStory.tsx`: modal institucional com a história da marca (origem em *Tsaleach*, propósito, convicção central), acessível pela sidebar ("Sobre a marca") e pelo Login ("Por que Zaleva? A história da marca →")
+- Tagline oficial atualizada no hero do Login: **"Cuidado que gera valor."** (substitui "cuidado e resultado avançam juntos")
+- Docs: visao-geral.md (tese/tagline), modulos.md §1
+
 ## 2026-07-25 · Documentação viva + publicação (GitHub + Cloudflare)
 - Criada a documentação viva em `Docs/` (INDEX, contexto/*, CHANGELOG) e as skills `atualizar-docs` e `deploy`
 - `CLAUDE.md` com o fluxo automático: docs → commit → push → deploy após cada atualização

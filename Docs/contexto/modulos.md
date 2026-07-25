@@ -3,7 +3,7 @@
 > 16 áreas navegáveis. Cada seção lista: rota · arquivos · o que a tela faz · simulações interativas.
 
 ## §1 Login (`/login` — `pages/Login.tsx`)
-Painel de marca Zaleva + login fake (qualquer credencial) em 2 etapas: credenciais → seleção de unidade (Toledo/Eldorado) e papel (define a Home). Sessão persiste em `sessionStorage` (`useSessionStore` com `persist`).
+Painel de marca Zaleva (tagline "Cuidado que gera valor") + login fake (qualquer credencial) em 2 etapas: credenciais → seleção de unidade (Toledo/Eldorado) e papel (define a Home). Sessão persiste em `sessionStorage` (`useSessionStore` com `persist`). Link "Por que Zaleva?" abre o **modal da marca** (`components/modules/BrandStory.tsx` — também acessível em qualquer tela pela sidebar → "Sobre a marca").
 
 ## §2 Central de trabalho (`/` — `pages/Home.tsx`)
 Home adaptada ao papel ativo (Médico/Recepção/Comercial/Gestor), com `AlertaCritico` compartilhado (Carla). Médico: próximo paciente + agenda do dia + pós-ops. Recepção: fila com ações de status + confirmações + aniversariantes. Comercial: meta com barra de progresso + follow-ups + conversas sem resposta. Gestor: KPIs + pontos de atenção + time. **Trocar papel no avatar muda a tela ao vivo.**

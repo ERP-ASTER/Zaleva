@@ -4,6 +4,7 @@ import { Stethoscope, ConciergeBell, Briefcase, LineChart, Building2, ArrowRight
 import { useSessionStore } from '@/stores/useSessionStore'
 import { unidades } from '@/data/team'
 import type { Papel } from '@/data/types'
+import { BrandStoryModal } from '@/components/modules/BrandStory'
 
 const papeis: { id: Papel; label: string; desc: string; icone: typeof Stethoscope }[] = [
   { id: 'medico', label: 'Médico', desc: 'Agenda, prontuário e consulta assistida', icone: Stethoscope },
@@ -20,6 +21,7 @@ export default function Login() {
   const [etapa, setEtapa] = useState<'credenciais' | 'contexto'>('credenciais')
   const [papel, setPapel] = useState<Papel>('medico')
   const [unidade, setUnidade] = useState('un-toledo')
+  const [marcaAberta, setMarcaAberta] = useState(false)
 
   const entrar = () => {
     login(papel, unidade)
@@ -38,9 +40,9 @@ export default function Login() {
         </div>
         <div className="relative">
           <p className="font-display text-[34px] font-medium leading-tight text-white">
-            Cuidado e resultado
+            Cuidado que gera
             <br />
-            avançam <em className="text-gold-300">juntos</em>.
+            <em className="text-gold-300">valor</em>.
           </p>
           <p className="mt-4 max-w-md text-[14px] leading-relaxed text-white/60">
             A plataforma que acompanha a jornada completa do paciente — do primeiro contato à recorrência — com inteligência artificial em cada etapa.
@@ -49,9 +51,17 @@ export default function Login() {
             <Sparkles size={14} className="text-gold-300" />
             Marketing · Conversa · CRM · Agenda · Consulta · Contrato · Pós-atendimento
           </div>
+          <button
+            onClick={() => setMarcaAberta(true)}
+            className="mt-4 text-[12px] font-medium text-gold-300/90 underline-offset-4 transition-colors hover:text-gold-200 hover:underline"
+          >
+            Por que Zaleva? A história da marca →
+          </button>
         </div>
         <p className="relative text-[11px] text-white/30">Protótipo demonstrativo — todos os dados são fictícios</p>
       </div>
+
+      <BrandStoryModal aberto={marcaAberta} onFechar={() => setMarcaAberta(false)} />
 
       {/* Formulário */}
       <div className="flex flex-1 items-center justify-center bg-canvas p-8">

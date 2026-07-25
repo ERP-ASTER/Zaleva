@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
+import { BrandStoryModal } from '@/components/modules/BrandStory'
 import {
   Home,
   Inbox,
@@ -19,6 +21,7 @@ import {
   TabletSmartphone,
   PlayCircle,
   Lock,
+  Gem,
 } from 'lucide-react'
 import { useUiStore } from '@/stores/useUiStore'
 import { useInboxStore } from '@/stores/useInboxStore'
@@ -33,6 +36,7 @@ interface Item {
 
 export function Sidebar({ onAbrirDemo }: { onAbrirDemo: () => void }) {
   const navigate = useNavigate()
+  const [marcaAberta, setMarcaAberta] = useState(false)
   const naoLidas = useInboxStore((s) => s.conversas.reduce((acc, c) => acc + c.naoLidas, 0))
   const notifCriticas = useUiStore((s) => s.notificacoes.filter((n) => !n.lida && n.tipo === 'critico').length)
 
@@ -159,12 +163,20 @@ export function Sidebar({ onAbrirDemo }: { onAbrirDemo: () => void }) {
           >
             <PlayCircle size={15} /> Modo demo
           </button>
+          <button
+            onClick={() => setMarcaAberta(true)}
+            className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-[12.5px] font-medium text-white/50 transition-colors hover:bg-white/5 hover:text-white"
+          >
+            <Gem size={15} /> Sobre a marca
+          </button>
         </div>
       </nav>
 
       <p className="px-5 pb-4 text-[9.5px] leading-relaxed text-white/25">
         Protótipo demonstrativo · dados fictícios
       </p>
+
+      <BrandStoryModal aberto={marcaAberta} onFechar={() => setMarcaAberta(false)} />
     </aside>
   )
 }
