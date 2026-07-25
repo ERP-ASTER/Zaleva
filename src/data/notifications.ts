@@ -1,0 +1,68 @@
+import type { AppNotification } from './types'
+import { diasAtras, horasAtras, minutosAtras } from './dates'
+
+export const notificacoesIniciais: AppNotification[] = [
+  {
+    id: 'nt-carla',
+    tipo: 'critico',
+    titulo: '⚠ Resposta crítica no pós-operatório',
+    descricao: 'Carla Menezes (D+1 abdominoplastia) relatou dor 8/10 no check-in. Ação imediata recomendada.',
+    em: horasAtras(3, 54),
+    lida: false,
+    rota: '/pos-atendimento',
+  },
+  {
+    id: 'nt-amanda',
+    tipo: 'comercial',
+    titulo: '3 mensagens sem resposta',
+    descricao: 'Amanda Cardim (lead quente — Lipo HD) aguarda retorno no Instagram há 5 horas.',
+    em: horasAtras(5, 9),
+    lida: false,
+    rota: '/inbox',
+  },
+  {
+    id: 'nt-mariana',
+    tipo: 'comercial',
+    titulo: 'Avaliação de hoje — Mariana Duarte',
+    descricao: 'Lead da campanha Rino Verão tem avaliação às 10h com Dr. Renato. Orçamento em rascunho.',
+    em: horasAtras(2, 30),
+    lida: false,
+    rota: '/agenda',
+  },
+  {
+    id: 'nt-flavio',
+    tipo: 'financeiro',
+    titulo: 'Parcela vencida há 9 dias',
+    descricao: 'Flávio Arruda — parcela 5/6 da blefaroplastia (R$ 2.700). Link de cobrança enviado.',
+    em: diasAtras(2, 9, 15),
+    lida: false,
+    rota: '/dashboards',
+  },
+  {
+    id: 'nt-beatriz',
+    tipo: 'clinico',
+    titulo: 'Falta em retorno pós-operatório',
+    descricao: 'Beatriz Mont’Alverne (D+60 mamoplastia) não compareceu ao retorno. Reagendamento pendente.',
+    em: diasAtras(2, 15, 40),
+    lida: true,
+    rota: '/pos-atendimento',
+  },
+  {
+    id: 'nt-daniela',
+    tipo: 'info',
+    titulo: 'Contrato aguardando assinatura',
+    descricao: 'Daniela Sabino visualizou o contrato da abdominoplastia mas ainda não assinou.',
+    em: diasAtras(2, 20, 10),
+    lida: true,
+    rota: '/contratos',
+  },
+  {
+    id: 'nt-priscila',
+    tipo: 'comercial',
+    titulo: 'Follow-up atrasado',
+    descricao: 'Priscila Nunes fez avaliação há 9 dias e ainda não recebeu orçamento formal.',
+    em: minutosAtras(50),
+    lida: false,
+    rota: '/crm/dl-priscila',
+  },
+]

@@ -1,0 +1,14 @@
+node_modules
+dist
+*.local
+.DS_Store
+
+# credenciais de deploy — nunca commitar
+.env.deploy
+.env
+.env.*
+!.env.example
+
+# artefatos temporários de teste
+*.tmp.mjs
+.wrangler
