@@ -228,7 +228,7 @@ export default function Consultation() {
               <div className="space-y-3">
                 {transcricaoMariana.slice(0, falasVisiveis).map((f, i) => (
                   <div key={i} className={`flex gap-3 animate-fade-up ${f.quem === 'medico' ? '' : 'flex-row-reverse'}`}>
-                    <Avatar nome={f.quem === 'medico' ? prof?.nome ?? 'Médico' : contato.nome} cor={f.quem === 'medico' ? prof?.avatarColor : contato.avatarColor} size={28} />
+                    <Avatar nome={f.quem === "medico" ? prof?.nome ?? "Médico" : contato.nome} cor={f.quem === "medico" ? prof?.avatarColor : contato.avatarColor} foto={f.quem === "medico" ? prof?.foto : undefined} size={28} />
                     <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 ${f.quem === 'medico' ? 'rounded-tl-md bg-surface shadow-card' : 'rounded-tr-md bg-brand-50'}`}>
                       <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-wide text-ink-faint">{f.quem === 'medico' ? prof?.nome : contato.nome}</p>
                       <p className="text-[13px] leading-relaxed text-ink">{f.texto}</p>

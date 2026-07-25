@@ -6,7 +6,7 @@ export const unidades: Unit[] = [
 ]
 
 export const equipe: Professional[] = [
-  { id: 'prof-otavio', nome: 'Dr. Renato Somensi', papel: 'cirurgiao', especialidade: 'Cirurgia Plástica', registro: 'CRM 2469-MS', cor: '#0F6B5C', avatarColor: '#0F6B5C' },
+  { id: 'prof-otavio', nome: 'Dr. Renato Somensi', papel: 'cirurgiao', especialidade: 'Cirurgia Plástica', registro: 'CRM 2469-MS', cor: '#0F6B5C', avatarColor: '#0F6B5C', foto: '/avatars/dr-renato.jpg' },
   { id: 'prof-leticia', nome: 'Dra. Letícia Fontes', papel: 'cirurgiao', especialidade: 'Cirurgia Plástica', registro: 'CRM-MS 128.774', cor: '#155E63', avatarColor: '#155E63' },
   { id: 'prof-bruno', nome: 'Dr. Bruno Rezende', papel: 'cirurgiao', especialidade: 'Cirurgia Plástica', registro: 'CRM-MS 134.918', cor: '#7C5B28', avatarColor: '#7C5B28' },
   { id: 'prof-camila', nome: 'Dra. Camila Iwata', papel: 'dermatologista', especialidade: 'Dermatologia', registro: 'CRM-MS 141.203', cor: '#8B5CF6', avatarColor: '#6636C4' },

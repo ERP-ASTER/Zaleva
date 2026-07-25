@@ -440,7 +440,7 @@ function HomeGestor() {
             { nome: 'Dra. Camila Iwata', info: '5 procedimentos injetáveis', id: 'prof-camila' },
           ].map((m) => (
             <div key={m.id} className="flex items-center gap-2.5 py-1.5">
-              <Avatar nome={m.nome} cor={profById(m.id)?.avatarColor} size={28} />
+              <Avatar nome={m.nome} cor={profById(m.id)?.avatarColor} foto={profById(m.id)?.foto} size={28} />
               <span className="min-w-0">
                 <span className="block text-[12.5px] font-medium text-ink">{m.nome}</span>
                 <span className="block text-[11px] text-ink-muted">{m.info}</span>

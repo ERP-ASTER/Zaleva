@@ -175,7 +175,7 @@ export function Topbar() {
           onClick={() => setMenuAberto(menuAberto === 'perfil' ? null : 'perfil')}
           className="flex items-center gap-2 rounded-lg py-1 pl-1 pr-2 hover:bg-black/5"
         >
-          <Avatar nome={prof?.nome ?? 'Usuário'} cor={prof?.avatarColor} size={30} />
+          <Avatar nome={prof?.nome ?? "Usuário"} cor={prof?.avatarColor} foto={prof?.foto} size={30} />
           <span className="text-left">
             <span className="block max-w-[130px] truncate text-[12px] font-semibold leading-tight text-ink">{prof?.nome}</span>
             <span className="block text-[10.5px] leading-tight text-ink-muted">
@@ -198,7 +198,7 @@ export function Topbar() {
                 className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-[12.5px] text-ink hover:bg-canvas"
               >
                 <span className="flex items-center gap-2">
-                  <Avatar nome={profById(papelDefault(p.id))?.nome ?? ''} cor={profById(papelDefault(p.id))?.avatarColor} size={22} />
+                  <Avatar nome={profById(papelDefault(p.id))?.nome ?? ""} cor={profById(papelDefault(p.id))?.avatarColor} foto={profById(papelDefault(p.id))?.foto} size={22} />
                   {p.label} — {profById(papelDefault(p.id))?.nome.split(' ').slice(0, 2).join(' ')}
                 </span>
                 {papel === p.id && <Check size={14} className="text-brand-600" />}

@@ -15,6 +15,8 @@ export interface Professional {
   registro?: string
   cor: string // cor da agenda
   avatarColor: string
+  /** Foto real (em public/avatars) — profissionais podem ter retrato */
+  foto?: string
 }
 
 // ─── Pessoas ─────────────────────────────────────────────────────────────────

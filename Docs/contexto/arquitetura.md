@@ -22,10 +22,11 @@ src/
 │   └── useMarketingStore
 ├── lib/           # format.ts (brl, datas pt-BR) · ids.ts (uid) · cascade.ts (cascata do aceite)
 ├── components/
+│   ├── brand/     # ZalevaLogo: ZalevaMark/ZalevaWordmark/ZalevaLockup (± negativa) — identidade oficial
 │   ├── layout/    # AppShell, Sidebar, Topbar, ContextPanel, CommandPalette (⌘K), PageHeader
-│   ├── ui/        # Avatar, StatusPill, Stat, Tabs, Modal, Timeline, Toasts, EmptyState,
-│   │              # AISuggestion/AIChip/AIPensando (padrão visual de IA)
-│   └── modules/   # MedicalDoc (LutherLogo + visualizador de documento) · DocShortcuts
+│   ├── ui/        # Avatar (iniciais OU foto real), StatusPill, Stat, Tabs, Modal, Timeline, Toasts,
+│   │              # EmptyState, AISuggestion/AIChip/AIPensando (padrão visual de IA)
+│   └── modules/   # MedicalDoc (LutherLogo + visualizador de documento) · DocShortcuts · BrandStory
 └── pages/         # 1 arquivo por rota (subcomponentes no mesmo arquivo quando exclusivos)
 ```
 

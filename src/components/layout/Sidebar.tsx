@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { BrandStoryModal } from '@/components/modules/BrandStory'
+import { ZalevaMark } from '@/components/brand/ZalevaLogo'
 import {
   Home,
   Inbox,
@@ -76,12 +77,10 @@ export function Sidebar({ onAbrirDemo }: { onAbrirDemo: () => void }) {
     <aside className="flex h-screen w-[218px] shrink-0 flex-col bg-brand-950 text-white/80">
       {/* Logo */}
       <button onClick={() => navigate('/')} className="flex items-center gap-2.5 px-5 pb-5 pt-6 text-left">
-        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 font-display text-[17px] font-bold text-white">
-          Z
-        </span>
+        <ZalevaMark size={32} negativa fundoAnel="#041F1B" />
         <span>
-          <span className="block font-display text-[16px] font-semibold leading-none tracking-wide text-white">Zaleva</span>
-          <span className="mt-0.5 block text-[9.5px] uppercase tracking-[0.14em] text-white/40">Clínica M. Luther</span>
+          <span className="block font-display text-[16px] font-medium leading-none tracking-wide text-white">Zaleva</span>
+          <span className="mt-1 block text-[9.5px] uppercase tracking-[0.14em] text-white/40">Clínica M. Luther</span>
         </span>
       </button>
 

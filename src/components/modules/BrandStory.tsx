@@ -1,17 +1,14 @@
 import { Sparkles } from 'lucide-react'
 import { Modal } from '@/components/ui/Modal'
+import { ZalevaLockup } from '@/components/brand/ZalevaLogo'
 
 /** Modal institucional — a história e o propósito da marca Zaleva. */
 export function BrandStoryModal({ aberto, onFechar }: { aberto: boolean; onFechar: () => void }) {
   return (
     <Modal aberto={aberto} onFechar={onFechar} larguraMax="max-w-xl">
-      {/* Cabeçalho de marca */}
-      <div className="-mx-6 -mt-6 mb-6 rounded-t-2xl bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800 px-8 py-10 text-center">
-        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-600 font-display text-[28px] font-bold text-white shadow-raised">
-          Z
-        </span>
-        <h2 className="mt-4 font-display text-[28px] font-semibold tracking-wide text-white">Zaleva</h2>
-        <p className="mt-1 font-display text-[15px] italic text-gold-300">Cuidado que gera valor</p>
+      {/* Cabeçalho de marca — lockup completo do conceito visual */}
+      <div className="-mx-6 -mt-6 mb-6 rounded-t-2xl bg-gradient-to-br from-brand-950 via-brand-900 to-[#123B46] px-8 py-10">
+        <ZalevaLockup negativa size={92} fundoAnel="#0B3A38" />
       </div>
 
       <div className="space-y-4 px-1 text-[13.5px] leading-relaxed text-ink-soft">

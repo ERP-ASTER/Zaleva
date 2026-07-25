@@ -14,7 +14,7 @@ Sistemas atuais tratam o paciente como "mero agendamento". No Zaleva, o mesmo re
 
 | Item | Valor |
 |---|---|
-| Plataforma | **Zaleva** (logo "Z" esmeralda, fonte display Fraunces) |
+| Plataforma | **Zaleva** — identidade oficial em `components/brand/ZalevaLogo.tsx`: monograma "Z" petróleo com swoosh ascendente (gradiente teal→dourado), seta e ponto dourados; wordmark serif (Fraunces); variantes colorida/negativa; favicon em `public/zaleva.svg` |
 | Clínica cliente | **Clínica M. Luther** — cirurgia plástica & estética |
 | Logomarca da clínica | Retrato estilizado de Martinho Lutero (SVG em `MedicalDoc.tsx` → `LutherLogo`) |
 | Unidades | **Toledo** (principal) e **Eldorado** |

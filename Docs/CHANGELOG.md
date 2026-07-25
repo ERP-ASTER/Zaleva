@@ -2,6 +2,12 @@
 
 > Cada atualização implementada é registrada aqui automaticamente (mais recente no topo), com referência aos documentos de contexto afetados. Formato: data · título · o que mudou · docs atualizados.
 
+## 2026-07-25 · Identidade visual oficial + foto do Dr. Renato
+- Conceito de marca vetorizado em `components/brand/ZalevaLogo.tsx`: `ZalevaMark` (monograma "Z" com swoosh gradiente teal→dourado, seta e ponto), `ZalevaWordmark` (horizontal) e `ZalevaLockup` (vertical completo com tagline) — variantes colorida e **negativa** (fundos escuros/verdes)
+- Aplicações: favicon (`public/zaleva.svg`, negativo em quadrado petróleo), Sidebar, painel de marca do Login, cabeçalho do modal BrandStory (lockup integral) e rodapé do documento de orçamento
+- `Avatar` agora suporta `foto` (retrato real com fallback para iniciais); Dr. Renato Somensi com foto (`public/avatars/dr-renato.jpg`) no Topbar, App do médico, Teleconsulta, Consulta, chat interno e Home do gestor
+- Docs: visao-geral.md (marca visual), arquitetura.md (componentes de marca)
+
 ## 2026-07-25 · Modal da marca "Zaleva — Cuidado que gera valor"
 - Novo `components/modules/BrandStory.tsx`: modal institucional com a história da marca (origem em *Tsaleach*, propósito, convicção central), acessível pela sidebar ("Sobre a marca") e pelo Login ("Por que Zaleva? A história da marca →")
 - Tagline oficial atualizada no hero do Login: **"Cuidado que gera valor."** (substitui "cuidado e resultado avançam juntos")

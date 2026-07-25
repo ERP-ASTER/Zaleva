@@ -86,7 +86,7 @@ export default function Teleconsult() {
               <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-ink">
                 {cam ? (
                   <>
-                    <Avatar nome={prof.nome} cor={prof.avatarColor} size={72} />
+                    <Avatar nome={prof.nome} cor={prof.avatarColor} foto={prof.foto} size={72} />
                     <span className="absolute bottom-2 left-2 rounded bg-black/50 px-1.5 py-0.5 text-[10px] text-white">Sua câmera (prévia)</span>
                   </>
                 ) : (
@@ -165,7 +165,7 @@ export default function Teleconsult() {
           <span className="absolute right-4 top-4 rounded-full bg-black/40 px-2.5 py-1 text-[10.5px] text-white/80">Criptografia ponta a ponta</span>
           {/* Miniatura do médico */}
           <div className="absolute bottom-4 right-4 flex h-28 w-44 items-center justify-center rounded-xl bg-zinc-950 ring-1 ring-white/15">
-            {cam ? <Avatar nome={prof.nome} cor={prof.avatarColor} size={48} /> : <VideoOff size={20} className="text-white/40" />}
+            {cam ? <Avatar nome={prof.nome} cor={prof.avatarColor} foto={prof.foto} size={48} /> : <VideoOff size={20} className="text-white/40" />}
             <span className="absolute bottom-1.5 left-2 text-[9.5px] text-white/70">{prof.nome}</span>
           </div>
         </div>

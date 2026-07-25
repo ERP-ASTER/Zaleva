@@ -27,6 +27,7 @@ import { Avatar } from '@/components/ui/Avatar'
 import { StatusPill } from '@/components/ui/StatusPill'
 import { Modal } from '@/components/ui/Modal'
 import { LutherLogo } from '@/components/modules/MedicalDoc'
+import { ZalevaWordmark } from '@/components/brand/ZalevaLogo'
 import { brl, fmtData } from '@/lib/format'
 
 const iconesCascata: Record<ItemCascata['icone'], typeof FileSignature> = {
@@ -269,7 +270,7 @@ export default function QuoteEditor() {
               </p>
               <div className="flex items-center justify-between border-t border-line pt-3">
                 <p className="text-[9.5px] text-ink-faint">Documento gerado pela plataforma Zaleva</p>
-                <p className="font-display text-[11px] font-semibold text-brand-700">zaleva</p>
+                <ZalevaWordmark size={15} />
               </div>
             </div>
           </div>

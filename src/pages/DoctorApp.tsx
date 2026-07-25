@@ -184,7 +184,7 @@ export default function DoctorApp() {
             <div className="bg-brand-950 px-5 pb-4 pt-10 text-white">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <Avatar nome={prof.nome} cor={prof.avatarColor} size={34} />
+                  <Avatar nome={prof.nome} cor={prof.avatarColor} foto={prof.foto} size={34} />
                   <div>
                     <p className="text-[9.5px] uppercase tracking-[0.16em] text-white/50">Zaleva Médico</p>
                     <p className="font-display text-[15px] font-semibold leading-tight">Dr. {primeiroNome(prof.nome.replace(/^Dr[a]?\. /, ''))}</p>
@@ -541,7 +541,7 @@ function AppChat() {
                     <Hash size={15} />
                   </span>
                 ) : (
-                  <Avatar nome={membro?.nome ?? c.nome} cor={membro?.avatarColor} size={36} />
+                  <Avatar nome={membro?.nome ?? c.nome} cor={membro?.avatarColor} foto={membro?.foto} size={36} />
                 )}
                 <span className="min-w-0 flex-1">
                   <span className={`block truncate text-[12px] ${c.naoLidas ? 'font-bold text-ink' : 'font-medium text-ink'}`}>
@@ -585,7 +585,7 @@ function AppChat() {
             <Hash size={12} />
           </span>
         ) : (
-          <Avatar nome={membro?.nome ?? aberta.nome} cor={membro?.avatarColor} size={28} />
+          <Avatar nome={membro?.nome ?? aberta.nome} cor={membro?.avatarColor} foto={membro?.foto} size={28} />
         )}
         <div className="min-w-0 flex-1">
           <p className="truncate text-[12px] font-semibold text-ink">{aberta.tipo === 'canal' ? `#${aberta.nome}` : aberta.nome}</p>
@@ -606,7 +606,7 @@ function AppChat() {
           const autor = profById(m.autorId)
           return (
             <div key={m.id} className={`flex ${minha ? 'justify-end' : 'justify-start'} animate-fade-up`}>
-              {!minha && <Avatar nome={autor?.nome ?? '?'} cor={autor?.avatarColor} size={22} className="mr-1.5 mt-auto" />}
+              {!minha && <Avatar nome={autor?.nome ?? "?"} cor={autor?.avatarColor} foto={autor?.foto} size={22} className="mr-1.5 mt-auto" />}
               <div className={`max-w-[78%] rounded-2xl px-3 py-1.5 ${minha ? 'rounded-br-md bg-brand-600 text-white' : 'rounded-bl-md border border-line bg-surface'}`}>
                 {!minha && aberta.tipo === 'canal' && <p className="text-[9px] font-bold text-brand-700">{autor?.nome}</p>}
                 <p className={`text-[11.5px] leading-relaxed ${minha ? '' : 'text-ink'}`}>{m.texto}</p>

@@ -5,6 +5,7 @@ import { useSessionStore } from '@/stores/useSessionStore'
 import { unidades } from '@/data/team'
 import type { Papel } from '@/data/types'
 import { BrandStoryModal } from '@/components/modules/BrandStory'
+import { ZalevaMark } from '@/components/brand/ZalevaLogo'
 
 const papeis: { id: Papel; label: string; desc: string; icone: typeof Stethoscope }[] = [
   { id: 'medico', label: 'Médico', desc: 'Agenda, prontuário e consulta assistida', icone: Stethoscope },
@@ -35,8 +36,8 @@ export default function Login() {
         <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-600/20 blur-3xl" />
         <div className="absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-gold-400/10 blur-3xl" />
         <div className="relative flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 font-display text-xl font-bold text-white">Z</span>
-          <span className="font-display text-2xl font-semibold tracking-wide text-white">Zaleva</span>
+          <ZalevaMark size={44} negativa fundoAnel="#07332C" />
+          <span className="font-display text-2xl font-medium tracking-wide text-white">Zaleva</span>
         </div>
         <div className="relative">
           <p className="font-display text-[34px] font-medium leading-tight text-white">
